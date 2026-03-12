@@ -5,6 +5,12 @@ My Classwork for [BIMM143](https://bioboot.github.io/bimm143_W26/) at UC San Die
 
 *Introductory Materials*
 
+- Class 01 [Intro to R](/lab01.pdf)
+
+- Class 02 [Intro to R](/lab02.pdf)
+
+- Class 03 [Intro to R](/lab03.pdf)
+
 - Class 04 [Intro to R](class04/class04.html)
 
 - Class 05 [Data Visualization with ggplot](class05/class05.md)
