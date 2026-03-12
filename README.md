@@ -5,11 +5,11 @@ My Classwork for [BIMM143](https://bioboot.github.io/bimm143_W26/) at UC San Die
 
 *Introductory Materials*
 
-- Class 01 [Intro to R](/lab01.pdf)
+- Class 01 [Intro to Bioinformatics](/lab01.pdf)
 
-- Class 02 [Intro to R](/lab02.pdf)
+- Class 02 [Sequence Alignment Fundamentals, Algorithms and Applications](/lab02.pdf)
 
-- Class 03 [Intro to R](/lab03.pdf)
+- Class 03 [Advanced Sequence Alignment and Database Searching](/lab03.pdf)
 
 - Class 04 [Intro to R](class04/class04.html)
 
