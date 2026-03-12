@@ -1,0 +1,59 @@
+---
+title: "Class 19: Cancer Mutation Mini-Project"
+author: "Brian Wong (PID: A18639001)"
+format: html
+---
+
+```{r}
+library(bio3d)
+
+ngs <- read.fasta("A18639001_mutant_seq.fa")
+ngs
+```
+
+> Q1. [1pt] What protein do these sequences correspond to? (Give both full gene/protein name and official symbol).
+
+Official gene/protein name: ALK, Chain A, ALK tyrosine kinase receptor 
+Protein/Official symbol: 7NX3_A.
+
+```{r}
+blast.pdb(ngs)
+```
+
+> Q2. [6pts] What are the tumor specific mutations in this particular case ( e.g. A130V)?
+
+```{r}
+which(conserv(ngs) < 1)
+```
+
+V1145L, E1233I, R1242E, Y1312T
+
+> Q3. [1pts] Do your mutations cluster to any particular domain and if so give the name and PFAM id of this domain? Alternately note whether your protein is single domain and provide it’s PFAM id/accession and name (e.g. PF00613 and PI3Ka).
+
+Yes, the mutations are found between the ~1100 and ~1400 bp areas. This domain corresponds to the Pkindase_Tyr domain and the protein is not a single domain, but rather composed of multiple ones. 
+
+PFAM ID: PF07714
+Name: Protein tyrosine and serine/threonine kinase
+
+> Q4. [2pts] Using the NCI-GDC list the observed top 2 missense mutations in this protein (amino acid substitutions)?
+
+The top 2 missense mutations in this protein are R1275Q and F1174L
+
+> Q5. [2pts] What two TCGA projects have the most cases affected by mutations of this gene?
+(Give the TCGA “code” and “Project Name” for example “TCGA-BRCA” and “Breast Invasive
+Carcinoma”).
+
+Code: TCGA-UCEC   Project Name: Uterine Corpus Endometrial Carcinoma
+Code: TCGA-SKCM   Project Name: Skin Cutaneous Melanoma
+
+> Q6. [3pts] List one RCSB PDB identifier with 100% identity to the wt_healthy sequence and detail the percent coverage of your query sequence for this known structure? Alternately,provide the most similar in sequence PDB structure along with it’s percent identity, coverageand E-value. Does this structure “cover” (i.e. include or span the amino acid residue positions) of your previously identified tumor specific mutations?
+
+RCSB PDB: 7NX3_A
+Percentage Coverage: 100%
+E-Value: 0.0
+
+No, this structure does not "cover" the previously identified tumor specific mutations. It only ranges from 648 to 1030, which is out of the range of where the mutations were at.
+
+
+
+

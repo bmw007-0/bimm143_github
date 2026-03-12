@@ -1,0 +1,62 @@
+---
+title: "Class 12: Genome Informatics"
+author: "Brian Wong (PID: A18639001)"
+format: pdf
+---
+
+## Background
+
+This class introduces the fundamentals of genome informatics and high throughput sequencing. The lab itself focuses on the Galaxy platform and RNA-Sequencing methods for gene expression analysis. 
+
+
+## Section 4: Population Scale Analysis [HOMEWORK]
+One sample is obviously not enough to know what is happening in a population. You are interested in assessing genetic differences on a population scale. So, you processed about ~230 samples and did the normalization on a genome level. Now, you want to find whether there is any association of the 4 asthma-associated SNPs (rs8067378…) on ORMDL3 expression.
+
+
+> Q13: Read this file into R and determine the sample size for each genotype and their corresponding median expression levels for each of these genotypes. 
+
+```{r}
+expr <- read.table("rs8067378_ENSG00000172057.6.txt")
+head(expr)
+```
+
+The sample size for each genotype is here below:
+```{r}
+table(expr$geno)
+```
+
+The median expression levels for each of the genotypes are here below:
+```{r}
+summary(expr$exp[expr$geno == "A/A"])
+summary(expr$exp[expr$geno == "A/G"])
+summary(expr$exp[expr$geno == "G/G"])
+
+
+bp <- boxplot(exp ~ geno, expr)
+bp$stats[3,]
+```
+
+A/A = 31.24847, A/G = 25.06486, G/G = 20.07363
+
+> Q14: Generate a boxplot with a box per genotype, what could you infer from the relative expression value between A/A and G/G displayed in this plot? Does the SNP affect the expression of ORMDL3?
+
+It can be inferred that the relative expression value between A/A and G/G are quite different, with G/G being having a reduced relative expression level compared to A/A. Therefore, it can be inferred that the SNP does affect the expression of ORMDL3 based on this boxplot. 
+
+```{r}
+library(ggplot2)
+ggplot(expr) + aes(geno, exp, fill = geno) + geom_boxplot(notch = TRUE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
