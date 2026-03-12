@@ -27,9 +27,10 @@ My Classwork for [BIMM143](https://bioboot.github.io/bimm143_W26/) at UC San Die
 
 - Class 14 [RNA-Seq Analysis Mini-Project](class14/class14.md)
 
-- Class 15 [Hands-on with Git and Github]()
+- Class 15 [Hands-on with Git and Github](https://github.com/bmw007-0/bimm143_github
+)
 
-- Class 16 [Essential UNIX for Bioinformatics]()
+- Class 16 [Essential UNIX for Bioinformatics](class16/unix_notes.md)
 
 - Class 17 [Analyzing Sequencing Data in the Cloud](class17/class17.md)
 
